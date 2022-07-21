@@ -1,9 +1,9 @@
 :root {
     /* text colors */
     --primary-text-color: #757575;
-    --logo-web-text-color: #2196F3;
-    --logo-header-text-color: #000000;
-    --logo-footer-text-color: #FFFFFF;
+    --logo-text-color: #2196F3;
+    --logo-black-text-color: #000000;
+    --logo-white-text-color: #FFFFFF;
     --accent-color: #2196F3;
     --hero-text-color: #FFFFFF;
     --title-text-color: #212121;
@@ -92,50 +92,54 @@ fieldset {
     margin-right: auto;
 }
 
-/* header: */
+/* Header: */
 .header {
-    /* margin-bottom: 5px; */
     border-bottom: 1px solid var(--header-border-color);
 }
 
 /* page-nav */
-.page-nav {
+.header__page-nav {
     display: flex;
 }
 
-.main-nav {
+.header__main-nav {
     display: flex;
     align-items: center;
 }
 
-/* logo */
-.logo-web,
-.logo-header,
-.logo-footer {
+/* Header: logo */
+.logo {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
-    color: var(--logo-web-text-color);
+    color: var(--logo-text-color);
 }
 
-.logo-header {
-    color: var(--logo-header-text-color);
+.logo--black {
+    color: var(--logo-black-text-color);
 }
 
-/* navigation */
-.navigation {
-    display: flex;
+.logo--white {
+    color: var(--logo-white-text-color);
+}
+
+/* Header: navigation */
+.page-nav__navigation {
     margin-left: 93px;
 }
 
-.navigation .item + .item {
+.navigation {
+    display: flex;
+}
+
+.navigation__item + .navigation__item {
     margin-left: 50px;
 }
 
-.navigation .nav-link {
+.navigation__link {
     position: relative;
     display: block;
 
@@ -143,7 +147,7 @@ fieldset {
     padding-bottom: 32px;
 }
 
-.nav-link::after {
+.navigation__link::after {
     position: absolute;
     content: "";
     display: block;
@@ -161,23 +165,22 @@ fieldset {
     transition-duration: var(--duration);
 }
 
-.current.nav-link::after {
+.navigation__link--current::after {
     opacity: 1;
 }
 
-/* .contacts */
+/* Header: contacts */
 .contacts {
     display: flex;
     margin-left: auto;
 }
 
-.contacts .item + .item {
+.contacts__item + .contacts__item {
     margin-left: 30px;
 }
 
 .contacts .mail-link,
 .contacts .tel-link {
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -187,7 +190,7 @@ fieldset {
     list-style: none;
 }
 
-.nav-link,
+.navigation__link,
 .contacts .mail-link,
 .contacts .tel-link {
     font-weight: 500;
@@ -201,9 +204,9 @@ fieldset {
     transition-duration: var(--duration);
 }
 
-.current,
-.nav-link:hover,
-.nav-link:focus {
+.navigation__link--current,
+.navigation__link:hover,
+.navigation__link:focus {
     color: var(--accent-color);
 }
 
@@ -221,7 +224,14 @@ fieldset {
     fill: currentColor;
 }
 
-/* hero */
+.mail-link:hover,
+.mail-link:focus,
+.tel-link:hover,
+.tel-link:focus {
+    color: var(--accent-color);
+}
+
+/* Hero */
 .hero {
     padding: 200px 0;
     text-align: center;
@@ -501,31 +511,30 @@ fieldset {
     fill: currentColor;
 }
 
-/* footer */
-/* footer: address */
+/* Footer */
 .footer {
     padding: 60px 0;
     background-color: var(--hero-bcg-color);
 }
 
-.logo-footer {
+/* footer: logo */
+.footer__logo {
     display: block;
     margin-bottom: 20px;
-
-    color: var(--logo-footer-text-color);
 }
 
+/* footer: address */
 .address {
     list-style: none;
 }
 
-.address .item:not(:last-child) {
+.address__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
 .location-link,
-.address .mail-link,
-.address .tel-link {
+.address__mail-link,
+.address__tel-link {
     font-style: normal;
     font-weight: 400;
     line-height: 1.71;
@@ -533,8 +542,8 @@ fieldset {
     color: var(--location-text-color);
 }
 
-.address .mail-link,
-.address .tel-link {
+.address__mail-link,
+.address__tel-link {
     color: var(--address-text-color);
 
     transition-property: color;
@@ -542,10 +551,10 @@ fieldset {
     transition-duration: var(--duration);
 }
 
-.mail-link:hover,
-.mail-link:focus,
-.tel-link:hover,
-.tel-link:focus {
+.address__mail-link:hover,
+.address__mail-link:focus,
+.address__tel-link:hover,
+.address__tel-link:focus {
     color: var(--accent-color);
 }
 
@@ -588,7 +597,7 @@ fieldset {
     height: 44px;
 
     border-radius: 50%;
-    fill: var(--logo-footer-text-color);
+    fill: var(--logo-white-text-color);
     background-color: var(--footer-social-nets-bcg-color);
 
     transition-property: background-color;
@@ -889,7 +898,7 @@ fieldset {
     right: 8px;
     
     background-color: transparent;
-    fill: var(--logo-header-text-color);
+    fill: var(--logo-black-text-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;

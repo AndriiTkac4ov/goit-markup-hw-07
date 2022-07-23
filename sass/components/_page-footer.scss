@@ -1,0 +1,26 @@
+.page-footer {
+    display: flex;
+    align-items: baseline;
+}
+
+.page-footer__logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.page-footer__connect {
+    margin-left: 70px;
+    width: 206px;
+}
+
+.page-footer__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--footer-white-text-color);
+}
+
+.page-footer__subscribe {
+    margin-left: auto;
+}

@@ -1,0 +1,11 @@
+.activities {
+    padding-top: 0;
+}
+
+.activities__list {
+    display: flex;
+}
+
+.activities__item+.activities__item {
+    margin-left: 30px;
+}

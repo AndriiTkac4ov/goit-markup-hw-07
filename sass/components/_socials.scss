@@ -2,51 +2,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.socials__item:not(:first-child) {
-    margin-left: 10px;
-}
-
-.socials__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-
-    fill: var(--footer-white-text-color);
-    background-color: var(--footer-socials-bcg-color);
-
-    transition-property: background-color;
-    transition-timing-function: var(--timing-function);
-    transition-duration: var(--duration);
-}
-
-.socials__link:hover,
-.socials__link:focus {
-    background-color: var(--accent-color);
-}
-
-.socials__link--grey {
-    color: var(--team-member-socials-color);
-
-    transition-property: color, background-color;
-    transition-timing-function: var(--timing-function);
-    transition-duration: var(--duration);
-}
-
-.socials__link--grey:hover,
-.socials__link--grey:focus {
-    color: var(--team-member-socials-accent-color);
-}
-
-.socials__icon {
-    width: 20px;
-    height: 20px;
-}
-
-.socials__icon--currentcolor {
-    fill: currentColor;
+    &__item:not(:first-child) {
+        margin-left: 10px;
+    }
+    
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+    
+        fill: var(--footer-white-text-color);
+        background-color: var(--footer-socials-bcg-color);
+    
+        transition-property: background-color;
+        transition-timing-function: var(--timing-function);
+        transition-duration: var(--duration);
+    }
+    
+    &__link:hover,
+    &__link:focus {
+        background-color: var(--accent-color);
+    }
+    
+    &__link--grey {
+        color: var(--team-member-socials-color);
+    
+        transition-property: color,background-color;
+        transition-timing-function: var(--timing-function);
+        transition-duration: var(--duration);
+    }
+    
+    &__link--grey:hover,
+    &__link--grey:focus {
+        color: var(--team-member-socials-accent-color);
+    }
+    
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    &__icon--currentcolor {
+        fill: currentColor;
+    }
 }

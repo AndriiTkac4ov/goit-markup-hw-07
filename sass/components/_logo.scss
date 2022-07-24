@@ -6,12 +6,13 @@
     line-height: 1.19;
     text-decoration: none;
     color: var(--logo-text-color);
-}
 
-.logo--black {
-    color: var(--logo-black-text-color);
-}
 
-.logo--white {
-    color: var(--logo-white-text-color);
+    &--black {
+        color: var(--logo-black-text-color);
+    }
+
+    &--white {
+        color: var(--logo-white-text-color);
+    }
 }

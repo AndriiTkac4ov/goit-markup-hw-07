@@ -7,9 +7,7 @@
     }
 
     &__picture {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex--centered;
         height: 120px;
         margin-bottom: 30px;
 
